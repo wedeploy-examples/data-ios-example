@@ -18,34 +18,34 @@ import WeDeploy
 
 class AddToDoViewController: UIViewController {
 
-	@IBOutlet weak var toDoTextField: UITextField!
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap))
-		view.addGestureRecognizer(tapGesture)
-	}
-	
-	@IBAction func addToDoClick() {
-		guard let todo = toDoTextField.text,
-			!todo.isEmpty else { return }
-		
-		WeDeploy.data("https://db-boilerplatedata.wedeploy.io")
-			.create(resource: "tasks", object: ["name" : todo])
-			.toCallback { objectCreated, error in
-				if let objectCreated = objectCreated {
-					print("To do added: \(objectCreated)")
-					self.toDoTextField.text = ""
-				}
-				else {
-					print("Error: \(error!)")
-				}
-			}
-	}
-	
-	@objc dynamic func handleScreenTap() {
-		view.endEditing(true)
-	}
+  @IBOutlet weak var toDoTextField: UITextField!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleScreenTap))
+    view.addGestureRecognizer(tapGesture)
+  }
+  
+  @IBAction func addToDoClick() {
+    guard let todo = toDoTextField.text,
+      !todo.isEmpty else { return }
+    
+    WeDeploy.data("https://db-boilerplatedata.wedeploy.io")
+      .create(resource: "tasks", object: ["name" : todo])
+      .toCallback { objectCreated, error in
+        if let objectCreated = objectCreated {
+          print("To do added: \(objectCreated)")
+          self.toDoTextField.text = ""
+        }
+        else {
+          print("Error: \(error!)")
+        }
+      }
+  }
+  
+  @objc dynamic func handleScreenTap() {
+    view.endEditing(true)
+  }
 
 }
 

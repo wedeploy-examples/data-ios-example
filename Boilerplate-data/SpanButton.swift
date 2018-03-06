@@ -18,23 +18,23 @@ import UIKit
 
 class SpanButton : UIButton {
 
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		initialize()
-	}
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    initialize()
+  }
 
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-	}
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
 
-	override func awakeFromNib() {
-		super.awakeFromNib()
+  override func awakeFromNib() {
+    super.awakeFromNib()
 
-		initialize()
-	}
+    initialize()
+  }
 
-	func initialize() {
-		titleLabel?.font = UIFont.boldWeFont(ofSize: 14)
-		setTitleColor(.mainColor, for: .normal)
-	}
+  func initialize() {
+    titleLabel?.font = UIFont.boldWeFont(ofSize: 14)
+    setTitleColor(.mainColor, for: .normal)
+  }
 }
