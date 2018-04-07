@@ -15,6 +15,8 @@
 
 import UIKit
 
+let dataUrl = "https://<data-service-id>.wedeploy.io"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
