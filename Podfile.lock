@@ -22,6 +22,14 @@ PODS:
 DEPENDENCIES:
   - WeDeploy
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PromiseKit
+    - RxSwift
+    - Socket.IO-Client-Swift
+    - Starscream
+    - WeDeploy
+
 SPEC CHECKSUMS:
   PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
@@ -31,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7dec5054f57f800160c35ea09df4d4e6da33e851
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

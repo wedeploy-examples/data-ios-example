@@ -15,7 +15,7 @@
 
 import UIKit
 
-let dataUrl = "https://<data-service-id>.wedeploy.io"
+let dataUrl = "https://db-boilerplatedata.wedeploy.io"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
